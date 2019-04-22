@@ -12,3 +12,12 @@ docker-compose exec wireguard /bin/bash -c 'ip address add dev wg0 192.168.88.1/
 docker-compose exec wireguard /bin/bash # update /root/wg_config/wg.def from sample, then execute /root/wg_config/user.sh -a userABC
 docker-compose exec wireguard wg showconf wg0
 ```
+
+Reference
+----
+- https://github.com/masipcat/wireguard-go-docker
+- https://github.com/adrianmihalko/raspberrypiwireguard
+- https://github.com/adrianmihalko/wg_config
+- https://www.wireguard.com/install/
+- https://git.zx2c4.com/wireguard-go/about/ 
+
