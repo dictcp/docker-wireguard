@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  wireguard:
+    build: .
+    cap_add:
+     - NET_ADMIN
+    sysctls:
+     - net.ipv4.ip_forward=1
+    volumes:
+     - /dev/net/tun:/dev/net/tun
+    environment:
+     - WG_COLOR_MODE=always
+     - LOG_LEVEL=debug
+     - WG_I_PREFER_BUGGY_USERSPACE_TO_POLISHED_KMOD=1
+    ports:
+     - 51820:51820/udp
+    restart: always
+
